@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Open Sans', sans-serif;}
+table{
+  font-size: 17px;
+  th{
+    font-weight: 600;
+  }
+  td{
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    span{
+      font-weight: bold;
+    }
+    p{
+      font-style: italic;
+    }
+  }
+
+}

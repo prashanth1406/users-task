@@ -1,3 +1,4 @@
+import { MessagesComponent } from './messages/messages.component';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
@@ -9,7 +10,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MessagesComponent
       ],
     }).compileComponents();
   }));
@@ -26,10 +28,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('mars-task');
   });
 
-  it('should render title', () => {
+  it('should render NavBar With DashBoard', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('mars-task app is running!');
+    expect(compiled.querySelector('.navbar-brand').textContent).toContain('Dashboard');
   });
 });

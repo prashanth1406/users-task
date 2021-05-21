@@ -1,0 +1,56 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+text-align: right;
+  padding: 10px;
+  flex: 50%;
+  font-weight: 600;
+}
+
+.flex-item-right {
+  text-align: right;
+  padding: 10px 0;
+  flex: 50%;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #337ab7;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 12px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

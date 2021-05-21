@@ -1,0 +1,45 @@
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="main-breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a (click)="goToUsers()">Users </a></li>
+      <li class="breadcrumb-item active" aria-current="page">User Cards</li>
+    </ol>
+  </nav>
+  <!-- /Breadcrumb -->
+
+<div class="usercard" *ngIf="users.length > 0 && users[currentUserIndex]"
+  [@cardAnimator]="animationstate"
+  (@cardAnimator.done)="resetAnimation($event)"
+  (swipeleft)='startAnimation("swipeleft")'
+  (swiperight)='startAnimation("swiperight")'
+  >
+<mat-card >
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{users[currentUserIndex].name}}</mat-card-title>
+    <mat-card-subtitle>{{users[currentUserIndex].email}}</mat-card-subtitle>
+  </mat-card-header>
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+  <mat-card-content>
+    <address>
+     <span>Street:</span>&nbsp;{{users[currentUserIndex].address.street}} <br>
+     <span>Suite:</span>&nbsp;{{users[currentUserIndex].address.suite}} <br>
+     <span>City:</span>&nbsp;{{users[currentUserIndex].address.city}} <br>
+     <span>ZipCode:</span>&nbsp;{{users[currentUserIndex].address.zipcode}} <br>
+    <span>Phone:</span>&nbsp;{{users[currentUserIndex].phone}} <br>
+       <br>
+      Website:&nbsp;<a>{{users[currentUserIndex].website}}</a> <br>
+      <br>
+     Company:&nbsp;{{users[currentUserIndex].company.name}}, {{users[currentUserIndex].company.catchPhrase}},{{users[currentUserIndex].company.bs}} <br>
+      </address>
+  </mat-card-content>
+</mat-card>
+</div>
+
+<mat-card *ngIf="!users[currentUserIndex] && currentUserIndex>0">
+  <mat-card-content>
+  <div class="user-done">
+    All Users are Completed...!!
+  </div>
+  </mat-card-content>
+</mat-card>

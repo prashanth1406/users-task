@@ -1,0 +1,38 @@
+.usercard {
+  width: 350px;
+  min-height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  top: 15px;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+
+.example-card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.user-done{
+  color: red;
+  text-align: center;
+  font-size: larger;
+}
+
+.example-header-image {
+  background-image: url('/assets/avatar.jpg');
+  background-size: cover;
+}
+
+.mat-card-header .mat-card-title {
+ font-weight: 600;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+address span {
+  font-weight: 600;
+}
+
